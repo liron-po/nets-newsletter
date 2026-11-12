@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>גיליון 1 – נטס 145, פליקנס 111 (11.11.2026)</title>
+<style>
+
+:root {
+  --bg: #000;
+  --card: #111;
+  --card-border: #2a2a2a;
+  --text: #f4f4f4;
+  --muted: #b4b4b4;
+  --faint: #8a8a8a;
+  --line: #333;
+  --white: #fff;
+  --nop: #6e6e6e;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Heebo", "Assistant", "Segoe UI", "SF Hebrew", "Arial Hebrew", "Noto Sans Hebrew", "Noto Sans", Arial, Tahoma, sans-serif;
+  text-align: right;
+  direction: rtl;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; border: 0; display: block; }
+a { color: var(--white); text-underline-offset: 3px; }
+bdi[dir="ltr"] { unicode-bidi: isolate; white-space: nowrap; }
+bdi[dir="ltr"].wrap { white-space: normal; }
+.hero h1 .t { display: block; }
+.en-name { display: block; font-weight: 500; font-size: 14px; color: var(--muted); margin-top: 2px; }
+.score { direction: ltr; unicode-bidi: isolate; }
+.q-track { direction: rtl; }
+a:hover { opacity: .85; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 0 48px; }
+
+/* Nets stripe */
+.stripe {
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    #000 0 10px,
+    #fff 10px 14px,
+    #000 14px 18px,
+    #fff 18px 22px,
+    #000 22px 32px
+  );
+}
+
+/* Hero */
+.hero {
+  padding: 28px 20px 32px;
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+.logo-badge {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 18px auto;
+  overflow: hidden;
+}
+.logo-badge img { width: 74px; height: 74px; }
+.issue-meta {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: .04em;
+  margin: 0 0 14px;
+}
+.hero h1 {
+  font-size: clamp(26px, 7vw, 36px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+.hero h1 .line2 { display: block; }
+.scoreboard {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 12px;
+  margin: 22px 0 8px;
+  flex-wrap: wrap;
+}
+.score {
+  font-size: clamp(48px, 16vw, 72px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+.score .sep { color: #666; font-weight: 500; padding: 0 4px; }
+.record {
+  display: inline-block;
+  border: 1px solid #444;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.teams {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+.venue, .kicker {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 16px;
+}
+.kicker { color: #e8e8e8; }
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  margin: 14px 12px 0;
+  padding: 22px 18px 20px;
+}
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 0 12px 0 0;
+  border-right: 3px solid #fff;
+  line-height: 1.3;
+}
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.card p { margin: 0 0 12px; }
+.card p:last-child { margin-bottom: 0; }
+.lead { font-size: 17px; }
+
+/* Key stats */
+.kv {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 18px;
+  font-size: 15px;
+}
+.kv th, .kv td {
+  text-align: right;
+  padding: 9px 10px;
+  border-bottom: 1px solid #2a2a2a;
+  vertical-align: middle;
+}
+.kv th {
+  color: var(--faint);
+  font-weight: 500;
+  font-size: 12px;
+}
+.kv td:first-child, .kv th:first-child { color: var(--muted); width: 42%; }
+.kv td:last-child { font-weight: 700; }
+
+/* Quarter chart */
+.quarters { margin: 6px 0 14px; }
+.q {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0 0 12px;
+}
+.q-num {
+  width: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--faint);
+  font-size: 14px;
+}
+.q-bars { flex: 1; min-width: 0; }
+.q-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 3px 0;
+}
+.q-team { width: 4.4em; flex-shrink: 0; font-size: 12px; color: var(--muted); }
+.q-pts { width: 2.2em; flex-shrink: 0; font-weight: 700; font-size: 13px; text-align: left; }
+.q-track {
+  flex: 1;
+  min-width: 0;
+  height: 9px;
+  background: #1c1c1c;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.q-fill { display: block; height: 100%; border-radius: 99px; }
+.q-fill.nets { background: #fff; }
+.q-fill.nop { background: #6a6a6a; }
+.q.total { border-top: 1px solid #2a2a2a; padding-top: 10px; margin-top: 4px; }
+.q.total .q-fill.nets { background: #fff; }
+.legend {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.legend i {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 2px;
+  margin-left: 6px;
+  vertical-align: -1px;
+}
+.legend .n { background: #fff; }
+.legend .p { background: #6a6a6a; }
+
+/* Players */
+.player {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-top: 1px solid #262626;
+}
+.players .player:first-of-type { border-top: 0; padding-top: 4px; }
+.shot {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  background: #0a0a0a;
+  flex-shrink: 0;
+  border: 1px solid #333;
+}
+.player-body { flex: 1; min-width: 0; }
+.stats {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+.aside {
+  font-style: italic;
+  color: #c8c8c8;
+  background: #191919;
+  border-right: 2px solid #444;
+  padding: 10px 12px;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* Israeli / youth tables */
+.subh {
+  margin: 18px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.israeli:first-of-type .subh { margin-top: 4px; }
+.israeli-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.israeli-head .shot { width: 56px; height: 56px; }
+.israeli-head .subh { margin: 0; }
+
+.data {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+.data th, .data td {
+  text-align: right;
+  padding: 8px 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+.data thead th {
+  font-size: 12px;
+  color: var(--faint);
+  font-weight: 500;
+  border-bottom: 1px solid #444;
+}
+.data tbody th { font-weight: 500; color: var(--muted); width: 40%; }
+.data tbody td { font-weight: 700; }
+.youth { font-size: 14px; }
+.youth th, .youth td { padding: 8px 8px; }
+.youth td:nth-child(2),
+.youth td:nth-child(3) { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.note { color: var(--muted); font-size: 14px; }
+
+/* One number */
+.big-num {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.big-num .eighty {
+  font-size: clamp(72px, 22vw, 120px);
+  font-weight: 800;
+  line-height: .85;
+  letter-spacing: -0.06em;
+  color: #fff;
+  flex-shrink: 0;
+}
+.big-num p { margin: 4px 0 0; }
+
+/* Sources */
+.sources { list-style: none; margin: 0; padding: 0; }
+.sources li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 10px;
+  margin: 0;
+  padding: 12px 0;
+  border-top: 1px solid #262626;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.sources li:first-child { border-top: 0; padding-top: 0; }
+.sources .n { color: var(--faint); font-weight: 700; padding-top: 1px; }
+.sources .src-body { min-width: 0; }
+.sources a.src-title { font-weight: 600; display: block; }
+.sources a.src-title.en { direction: ltr; text-align: left; unicode-bidi: isolate; }
+.sources .src-meta { color: var(--muted); font-size: 13px; margin-top: 3px; }
+.sources .date { white-space: nowrap; unicode-bidi: isolate; }
+
+.foot {
+  margin: 28px 20px 0;
+  color: var(--faint);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  body { font-size: 18px; }
+  .card { margin: 18px 0 0; padding: 26px 28px 24px; }
+  .hero { padding: 36px 8px 40px; }
+  .shot { width: 88px; height: 88px; }
+}
+
+</style>
+</head>
+<body>
+<div class="stripe" aria-hidden="true"></div>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="logo-badge"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Iteg15nXldeW15zXmNeoINeg15jXoSI+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTgiIGZpbGw9IiNmZmZmZmYiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1MiIgZmlsbD0iIzAwMDAwMCIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjQ2IiBmaWxsPSIjZmZmZmZmIi8+CiAgPHRleHQgeD0iNjAiIHk9IjcwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsIEhlYnJldywgTm90byBTYW5zIEhlYnJldywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiMwMDAwMDAiPteg15jXoTwvdGV4dD4KPC9zdmc+" alt="סמל ניוזלטר נטס" width="74" height="74"></div>
+    <p class="issue-meta">גיליון 1 · 12 בנובמבר 2026</p>
+    <h1><span class="t">ניצחון בלי אופי?</span><span class="t">ברוקלין נטס <bdi dir="ltr">145</bdi>,</span><span class="t">ניו אורלינס פליקנס <bdi dir="ltr">111</bdi></span></h1>
+    <div class="scoreboard">
+      <div class="score"><bdi dir="ltr">145–111</bdi></div>
+    </div>
+    <p class="record">המאזן העונתי אחרי הניצחון: <bdi dir="ltr">3–8</bdi></p>
+    <p class="teams">ברוקלין נטס <bdi dir="ltr">145</bdi> – ניו אורלינס פליקנס <bdi dir="ltr">111</bdi></p>
+    <p class="venue">רביעי, 11 בנובמבר 2026, בסמודי קינג סנטר בניו אורלינס. אצלנו המשחק נסגר בחמישי בשעה <bdi dir="ltr">03:00</bdi> (שעון ישראל).</p>
+    <p class="kicker"><strong>שורה שמגדירה את הערב:</strong> ניצחון קל בסמודי קינג סנטר — בלי נולן טראורה ובלי מיקל בראון ג'וניור.</p>
+  </header>
+
+  <section class="card" id="bottom-line">
+    <h2>השורה התחתונה</h2>
+    <p class="lead">ניצחון קל, בתוצאה שלא משאירה מקום לספק. הנטס הובילו ב־41 הפרש בשיא וקלעו 83 נקודות כבר במחצית. מייקל פורטר ג&#x27;וניור (<bdi dir="ltr">Michael Porter Jr.</bdi>) ויגור דמין (<bdi dir="ltr">Egor Dëmin</bdi>) סיימו עם 22 נקודות כל אחד. זה היה ערב בלי שני הגארדים הצעירים: נולן טראורה (<bdi dir="ltr">Nolan Traore</bdi>) הושבת בגלל נוקשות וכאב בשריר השוק הימני, ומיקל בראון ג&#x27;וניור (<bdi dir="ltr">Mikel Brown Jr.</bdi>) החסיר בגלל מחלה.</p>
+    <p>אכזבת המשחק היא לא שחקן אלא היריבה: הפליקנס הגיעו אחרי ההפסד הסדיר הגרוע בתולדותיהם, 51 הפרש לגולדן סטייט, ובלי טריי מרפי השלישי, בנדיקט מתורין, איב מיסי וטרנדון ווטפורד. המבחן האמיתי עוד לפנינו.</p>
+
+    <h3 style="font-size:15px;margin:18px 0 8px;font-weight:800;">מספרי מפתח</h3>
+    <table class="kv">
+      <thead><tr><th>מדד</th><th>ערך</th></tr></thead>
+      <tbody>
+        <tr><td>מהשדה</td><td><bdi dir="ltr">57%</bdi> (45 מ־79)</td></tr>
+        <tr><td>לשלוש</td><td><bdi dir="ltr">20/41 (48.8%)</bdi></td></tr>
+        <tr><td>אסיסטים</td><td>30 מול 13 איבודים</td></tr>
+        <tr><td>ריבאונדים</td><td><bdi dir="ltr">42–28</bdi></td></tr>
+        <tr><td>יתרון שיא</td><td><bdi dir="ltr">41</bdi></td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-size:15px;margin:8px 0 10px;font-weight:800;">נקודות לפי רבעים</h3>
+    <div class="legend"><span><i class="n"></i>נטס</span><span><i class="p"></i>פליקנס</span></div>
+    <div class="quarters">
+      
+    <div class="q">
+      <div class="q-num">1</div>
+      <div class="q-bars">
+        <div class="q-line">
+          <span class="q-team">נטס</span>
+          <div class="q-track"><span class="q-fill nets" style="width:88.6%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">39</bdi></span>
+        </div>
+        <div class="q-line">
+          <span class="q-team">פליקנס</span>
+          <div class="q-track"><span class="q-fill nop" style="width:56.8%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">25</bdi></span>
+        </div>
+      </div>
+    </div>
+      
+    <div class="q">
+      <div class="q-num">2</div>
+      <div class="q-bars">
+        <div class="q-line">
+          <span class="q-team">נטס</span>
+          <div class="q-track"><span class="q-fill nets" style="width:100.0%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">44</bdi></span>
+        </div>
+        <div class="q-line">
+          <span class="q-team">פליקנס</span>
+          <div class="q-track"><span class="q-fill nop" style="width:93.2%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">41</bdi></span>
+        </div>
+      </div>
+    </div>
+      
+    <div class="q">
+      <div class="q-num">3</div>
+      <div class="q-bars">
+        <div class="q-line">
+          <span class="q-team">נטס</span>
+          <div class="q-track"><span class="q-fill nets" style="width:54.5%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">24</bdi></span>
+        </div>
+        <div class="q-line">
+          <span class="q-team">פליקנס</span>
+          <div class="q-track"><span class="q-fill nop" style="width:34.1%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">15</bdi></span>
+        </div>
+      </div>
+    </div>
+      
+    <div class="q">
+      <div class="q-num">4</div>
+      <div class="q-bars">
+        <div class="q-line">
+          <span class="q-team">נטס</span>
+          <div class="q-track"><span class="q-fill nets" style="width:86.4%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">38</bdi></span>
+        </div>
+        <div class="q-line">
+          <span class="q-team">פליקנס</span>
+          <div class="q-track"><span class="q-fill nop" style="width:68.2%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">30</bdi></span>
+        </div>
+      </div>
+    </div>
+      
+    <div class="q total">
+      <div class="q-num">סה״כ</div>
+      <div class="q-bars">
+        <div class="q-line">
+          <span class="q-team">נטס</span>
+          <div class="q-track"><span class="q-fill nets" style="width:100.0%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">145</bdi></span>
+        </div>
+        <div class="q-line">
+          <span class="q-team">פליקנס</span>
+          <div class="q-track"><span class="q-fill nop" style="width:76.6%"></span></div>
+          <span class="q-pts"><bdi dir="ltr">111</bdi></span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <p>הרבע השלישי, 24 נקודות בלבד, היה הרגע שבו ברוקלין הורידה הילוך — אבל גם אותו הנטס ניצחו <bdi dir="ltr">24–15</bdi>, אחרי ריצת <bdi dir="ltr">8–0</bdi> בפתיחת הרבע.</p>
+  </section>
+
+  <section class="card players" id="players">
+    <h2>השחקנים במבט שלי</h2>
+    <p class="note">המספרים מהבוקס סקור הרשמי. ההערכות על הגנה, על קבוצתיות ועל כישרון הן חוות דעת אחרי הצפייה במשחק.</p>
+
+    
+    <article class="player">
+      <img class="shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IteSJ9eV15zXmdeV16Eg16jXkNeg15PXnCI+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTgiIGZpbGw9IiMxYTFhMWEiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8dGV4dCB4PSI2MCIgeT0iNzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwgSGVicmV3LCBOb3RvIFNhbnMgSGVicmV3LCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+15LXqDwvdGV4dD4KPC9zdmc+" alt="ג&#x27;וליוס ראנדל" width="88" height="88">
+      <div class="player-body">
+        <h3>ג&#x27;וליוס ראנדל<span class="en-name"><bdi dir="ltr">(Julius Randle)</bdi></span></h3>
+        <p class="stats">17 נקודות, 6 מ־16 מהשדה, 0 מ־5 לשלוש, 5 אסיסטים, <bdi dir="ltr">+38</bdi> ב־<bdi dir="ltr">29:20</bdi></p>
+        <p>זה היה משחק אגרסיבי, שכיף לראות. הגוף נכנס, הוא חיפש את הצבע, וכשהוא היה על הפרקט ברוקלין פשוט שלטה: ה־<bdi dir="ltr">+38</bdi>, על פי הניו יורק פוסט, השווה לשיא המועדון למשחק חוץ. אבל היעילות פיגרה אחרי האנרגיה. 6 מ־16 מהשדה ו־0 מ־5 מהקשת זה לא ערב קליעה, וגם כשיש חמישה אסיסטים — שמראים שהוא כן חיפש שותפים — זה עדיין לא סגנון המשחק הקבוצתי שאנחנו רוצים לראות כאוהדים.</p>
+      </div>
+    </article>
+
+    
+    <article class="player">
+      <img class="shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IteT15nXmdeo15XXnyDXqdeQ16jXpCI+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTgiIGZpbGw9IiMxYTFhMWEiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8dGV4dCB4PSI2MCIgeT0iNzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwgSGVicmV3LCBOb3RvIFNhbnMgSGVicmV3LCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+15PXqTwvdGV4dD4KPC9zdmc+" alt="דיירון שארפ" width="88" height="88">
+      <div class="player-body">
+        <h3>דיירון שארפ<span class="en-name"><bdi dir="ltr">(Day&#x27;Ron Sharpe)</bdi></span></h3>
+        <p class="stats">15 נקודות, 5 מ־6 מהשדה, 5 אסיסטים, 4 חסימות, <bdi dir="ltr">+20</bdi> ב־<bdi dir="ltr">19:05</bdi></p>
+        <p>זה בדיוק הסוג של ערב שאפשר לפספס אם מסתכלים רק על הקלעים. שארפ קלע 15 נקודות על 5 מ־6 מהשדה, כולל 2 מ־3 לשלוש, הוסיף 5 אסיסטים וסגר 4 זריקות — הכל בפחות מ־19 דקות. הוא ניהל את ההתקפה מבפנים, הגן על הצבע, ונתן לחמישייה יציבות בלי לעשות רעש. בשקט, הוא היה אחד השחקנים המשמעותיים יותר של היחידה ובאופן כללי ממשיך העונה את מה שראינו ממנו שנה שעברה שעלה מהספסל.</p>
+      </div>
+    </article>
+
+    
+    <article class="player">
+      <img class="shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Itee15nXmden15wg16TXldeo15jXqCDXkifXldeg15nXldeoIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1OCIgZmlsbD0iIzFhMWExYSIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjU2IiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9IjYwIiB5PSI3MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlNlZ29lIFVJLCBBcmlhbCBIZWJyZXcsIE5vdG8gU2FucyBIZWJyZXcsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjZmZmZmZmIj7XntekPC90ZXh0Pgo8L3N2Zz4=" alt="מייקל פורטר ג&#x27;וניור" width="88" height="88">
+      <div class="player-body">
+        <h3>מייקל פורטר ג&#x27;וניור<span class="en-name"><bdi dir="ltr">(Michael Porter Jr.)</bdi></span></h3>
+        <p class="stats">22 נקודות, 7 מ־14 מהשדה, 4 מ־10 לשלוש, 6 ריבאונדים, <bdi dir="ltr">+25</bdi> ב־<bdi dir="ltr">28:28</bdi></p>
+        <p>ההתקפה היתה פנומנלית. השלשות ישבו לא רע (למרות שלא ערב יוצא דופן), 4 מ־10 מהקשת, והסיום בצבע נראה קל, פלוס 4 מ־4 מהעונשין. זה הפורטר שאנחנו מכירים: קליעה נקיה, בלי מאמץ. אבל בהגנה העין אמרה משהו אחר. הוא לא תמיד יוצא בזמן לשחקן ולא תמיד קופץ לחסום, וזה נתן לפליקנס סלים קלים. ההגנה אצלו נראית טוב בחטיפות אבל בהסתכלות רחבה על רמת המאמץ שהוא משקיע בהגנה מתבטא חיסרון משמעותי (שההתקפה מחפה).</p><p>החטיפות וההסטות יכולות להיראות בסדר גמור, אפילו כמו עונת קריירה בקטגוריות האלה, אבל רובן מגיעות מקריאת קווי מסירה — יירוטים וציפייה מחוץ לכדור. זה אומר מעט מאוד על מה שקורה כשהוא צריך לשמור אחד על אחד. הרכות האמיתית היא בהחלטות שבדרך, באלה שלא נכנסות לבוקס סקור: בהגנת מעבר או בבלגן שאחרי ריבאונד התקפה, כשקלע נשאר פתוח, הוא לא תמיד רץ לסגור את היציאה; וכשחבר נחדר והעזרה היא מצב על הגבול, הוא לא עושה את הרוטציה. בערב הזה זה נראה, למשל, בשלשת 27 הרגל של זאיון וויליאמסון ברבע השני, <bdi dir="ltr">4:43</bdi> לסיום, בזכות שנייה אחרי ריבאונד התקפה של הפליקנס: פורטר היה המגן הקרוב, אבל במרחק של כ־9 רגל ועם יד נמוכה.</p><p class="aside">מהמעקב הרשמי של <bdi dir="ltr">NBA Blueprint</bdi> במשחק (המגן הקרוב ביותר לזריקה): פורטר היה המגן הקרוב בארבע זריקות שדה בלבד של הפליקנס, ו־3 מתוכן נכנסו. זה מדגם קטן; נתוני הגנה עונתיים (אחוזי קליעה נגד, זריקות מאותגרות) לא היו זמינים לבדיקה.</p>
+      </div>
+    </article>
+
+    
+    <article class="player">
+      <img class="shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IteT16DXmSDXldeV15zXoyI+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTgiIGZpbGw9IiMxYTFhMWEiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8dGV4dCB4PSI2MCIgeT0iNzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwgSGVicmV3LCBOb3RvIFNhbnMgSGVicmV3LCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+15PXlTwvdGV4dD4KPC9zdmc+" alt="דני וולף" width="88" height="88">
+      <div class="player-body">
+        <h3>דני וולף<span class="en-name"><bdi dir="ltr">(Danny Wolf)</bdi></span></h3>
+        <p class="stats">10 נקודות, 11 ריבאונדים (שיא קריירה), 4 אסיסטים, 2 חסימות, <bdi dir="ltr">+17</bdi> ב־<bdi dir="ltr">29:26</bdi></p>
+        <p>על הנייר זה דאבל־דאבל מעולה, בפתיחה השלישית ברציפות, למי שהתחיל את העונה מחוץ לרוטציה. 11 הריבאונדים הם שיא קריירה, ויש כאן גם אסיסטים ושתי חסימות. אבל ההגנה הערב היתה סיפור אחר. שחקנים נמוכים ממנו בהרבה הגיעו לעמדות זריקה קלות, כאילו עמד מולם גארד ולא סנטר של 2.11. גם עם הכדור הוא היה מרושל, וקל היה להפריע לו בכדרור. המספרים מספרים סיפור אחד; העין, בערב הזה, סיפור אחר.</p>
+      </div>
+    </article>
+
+    
+    <article class="player">
+      <img class="shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Itee15XXqNeZ16Ug15XXkteg16giPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjU4IiBmaWxsPSIjMWExYTFhIi8+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTYiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iNjAiIHk9IjcyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsIEhlYnJldywgTm90byBTYW5zIEhlYnJldywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiPtee15U8L3RleHQ+Cjwvc3ZnPg==" alt="מוריץ וגנר" width="88" height="88">
+      <div class="player-body">
+        <h3>מוריץ וגנר<span class="en-name"><bdi dir="ltr">(Moritz Wagner)</bdi></span></h3>
+        <p class="stats">16 נקודות, 6 מ־8 מהשדה, 2 מ־4 לשלוש, 4 אסיסטים, <bdi dir="ltr">+15</bdi> ב־<bdi dir="ltr">19:26</bdi> מהספסל</p>
+        <p>וגנר נותן לחמישייה עומק אמיתי. הוא קלע מבחוץ, סיים מבפנים, וגם מסר את הכדור. הרגע שלו היה הדאנק האלים על ג&#x27;ורדן פול (<bdi dir="ltr">Jordan Poole</bdi>) לאנד־וואן שהעלה ל־<bdi dir="ltr">31–19</bdi>. בערב שבו בראון חסר, הספסל היה חי בזכותו, והוא היה הסיבה הברורה לכך, נאמר על המשחק אבל זה מתבטא מתחילת העונה.</p>
+      </div>
+    </article>
+
+    
+    <article class="player">
+      <img class="shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IteZ15LXldeoINeT157XmdefIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1OCIgZmlsbD0iIzFhMWExYSIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjU2IiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9IjYwIiB5PSI3MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlNlZ29lIFVJLCBBcmlhbCBIZWJyZXcsIE5vdG8gU2FucyBIZWJyZXcsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjZmZmZmZmIj7XmdeTPC90ZXh0Pgo8L3N2Zz4=" alt="יגור דמין" width="88" height="88">
+      <div class="player-body">
+        <h3>יגור דמין<span class="en-name"><bdi dir="ltr">(Egor Dëmin)</bdi></span></h3>
+        <p class="stats">22 נקודות, 5 מ־8 מהשדה, 4 מ־6 לשלוש, <bdi dir="ltr">+29</bdi> ב־<bdi dir="ltr">23:17</bdi> — לדעתי הסיפור החשוב ביותר במשחק.</p>
+        <p>קודם כל, ההקשר: דמין חזר מחבורה בעצם הרגל אחרי שישה משחקים מחוץ לסגל, וג&#x27;ורדי פרננדז החזיר אותו ישר לחמישייה — בערב שבו טראורה ובראון לא שיחקו. על הנייר זו חזרה חלומית: 22 נקודות, 4 מ־6 לשלוש, 8 מ־10 מהעונשין, ו־12 מהנקודות הגיעו ברבע הרביעי. ובכל זאת, אני לא חושב שהוא צריך לפתוח על חשבון טראורה אלא לצידו. הוא פחות מוכשר מבראון וטראורה, לא חזק בהגנה, ומוגבל בהתקפה: שלשות, מסירות, וחדירות שנשענות בעיקר ביד ימין. אסיסט אחד בלבד ב־23 דקות מחזק את התחושה שהוא היה יותר קלעי מאשר יוצר. ערב טוב, כן. סיבה להעדיף אותו בהרכב על חשבונם? עדיין לא.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="card" id="israelis">
+    <h2>פינת הישראלים</h2>
+    <div class="israeli">
+      <div class="israeli-head">
+        <img class="shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IteT16DXmSDXldeV15zXoyI+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iNTgiIGZpbGw9IiMxYTFhMWEiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8dGV4dCB4PSI2MCIgeT0iNzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwgSGVicmV3LCBOb3RvIFNhbnMgSGVicmV3LCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+15PXlTwvdGV4dD4KPC9zdmc+" alt="דני וולף" width="56" height="56">
+        <h3 class="subh">דני וולף</h3>
+      </div>
+      <table class="data">
+        <thead><tr><th>נתון</th><th>ערך</th></tr></thead>
+        <tbody>
+          <tr><th>נקודות</th><td><bdi dir="ltr">10</bdi></td></tr>
+          <tr><th>ריבאונדים</th><td>11, שיא קריירה</td></tr>
+          <tr><th>אסיסטים</th><td><bdi dir="ltr">4</bdi></td></tr>
+          <tr><th>חסימות</th><td><bdi dir="ltr">2</bdi></td></tr>
+          <tr><th>פלוס־מינוס</th><td><bdi dir="ltr">+17</bdi></td></tr>
+        </tbody>
+      </table>
+      <p>וולף פתח בפעם השלישית ברציפות ורשם דאבל־דאבל שני ברצף, אבל המספרים מסתירים ערב חלש בהגנה ומרושל עם הכדור. הוא התחיל את העונה מחוץ לרוטציה של ג&#x27;ורדי פרננדז, ועכשיו עומד על 9.8 נקודות ו־6.2 ריבאונדים למשחק.</p>
+    </div>
+    <div class="israeli">
+      <h3 class="subh">בן שרף</h3>
+      <table class="data">
+        <thead><tr><th>נתון</th><th>ערך</th></tr></thead>
+        <tbody>
+          <tr><th>סטטוס</th><td>בליגת הפיתוח</td></tr>
+          <tr><th>נקודות</th><td>15.3 למשחק</td></tr>
+          <tr><th>אסיסטים</th><td>9.3 למשחק</td></tr>
+          <tr><th>ריבאונדים</th><td>3.7 למשחק</td></tr>
+        </tbody>
+      </table>
+      <p>שרף שיחק עד כה רק <bdi dir="ltr">3:38</bdi> דקות ב־<bdi dir="ltr">NBA</bdi> העונה, אבל בלונג איילנד הוא המנוע: הערב הבולט שלו היה 21 נקודות ו־12 אסיסטים בניצחון קומבק על גרינסבורו ב־7 בנובמבר.</p>
+    </div>
+  </section>
+
+  <section class="card" id="youth">
+    <h2>מעקב צעירים</h2>
+    <p class="note">רק שחקנים בשנה הראשונה או השנייה ב-<bdi dir="ltr">NBA</bdi>.</p>
+    <table class="data youth">
+      <thead><tr><th>שחקן</th><th>דקות</th><th>נקודות</th><th>הערה</th></tr></thead>
+      <tbody>
+        <tr><th>יגור דמין</th><td><bdi dir="ltr">23</bdi></td><td><bdi dir="ltr">22</bdi></td><td>פתח במקום הגארדים הצעירים</td></tr>
+        <tr><th>דני וולף</th><td><bdi dir="ltr">29</bdi></td><td><bdi dir="ltr">10</bdi></td><td>11 ריבאונדים</td></tr>
+        <tr><th>דרייק פאוול</th><td><bdi dir="ltr">7</bdi></td><td><bdi dir="ltr">6</bdi></td><td>2 מ־2 מהשדה</td></tr>
+        <tr><th>נולן טראורה</th><td>–</td><td>–</td><td>פצוע, 12.9 נק' בממוצע</td></tr>
+        <tr><th>מיקל בראון ג'וניור</th><td>–</td><td>–</td><td>חולה, 12.9 נק' בממוצע</td></tr>
+      </tbody>
+    </table>
+    <p class="note">סטטוס החזרה של טראורה ובראון לממפיס עדיין לא אושר.</p>
+  </section>
+
+  <section class="card" id="one-number">
+    <h2>מספר אחד</h2>
+    <div class="big-num">
+      <div class="eighty" aria-hidden="true"><bdi dir="ltr">83</bdi></div>
+      <p>83. 83 נקודות במחצית הראשונה, הכי הרבה של המועדון מאז 91 מול גולדן סטייט בדצמבר 2022. שישה שחקנים סיימו עם 15 נקודות לפחות, תיקו לשיא מועדון.</p>
+    </div>
+  </section>
+
+  <section class="card" id="analysis">
+    <h2>הפרשנות</h2>
+    <p class="lead">ניצחון קל, <bdi dir="ltr">145–111</bdi>, 41 הפרש בשיא. על הנייר, ערב מושלם. אבל מי שראה את המשחק הרגיש שמשהו חסר, וזה לא היה עוד קלע.</p>
+    <p>בלי נולן טראורה ומיקל בראון ג&#x27;וניור, הנטס היו קבוצה יעילה, לא קבוצה חיה. הם קלעו מהקשת, הזיזו את הכדור ונהנו מפליקנס מרוסקים, שהגיעו אחרי ההפסד הסדיר הגרוע בתולדותיהם ובלי ארבעה שחקני רוטציה. אבל איפה הריצה לטבעת, איפה המתפרצות? אפילו בנקודות ממתפרצות הפליקנס ניצחו, <bdi dir="ltr">17–14</bdi>. ברבע השלישי, כשהמשחק כבר היה מוכרע, ברוקלין פשוט הורידה הילוך ל-24 נקודות בלבד.</p>
+    <p>זה בדיוק מה ששני הצעירים מביאים: קצב, חוצפה, את הרגעים שבגללם קמים ב-3 בלילה. טראורה ובראון הם הסיבה שהעונה הזאת מעניינת, לא רק המאזן. דמין חזר יפה ווולף ממשיך לבסס את עצמו, אבל בלי שני הגארדים זה הרגיש יותר כמו אימון קליעה מאשר כמו הקבוצה שאנחנו מחכים לראות.</p>
+    <p>ממפיס בשבת היא מבחן אמיתי יותר. אם השניים חוזרים, נדע מהר מאוד מה חסר כאן.</p>
+  </section>
+
+  <section class="card" id="next">
+    <h2>מה הלאה</h2>
+    <p><strong>יריבה:</strong> ממפיס גריזליס, בחוץ.</p>
+    <p><strong>מתי:</strong> ראשון, 15 בנובמבר, <bdi dir="ltr">03:00</bdi> שעון ישראל (שבת, 14 בנובמבר, <bdi dir="ltr">20:00</bdi> שעון החוף המזרחי), בפדקס פורום.</p>
+    <p>זה המשחק האחרון בסיבוב חוץ של ארבעה משחקים. על מה לשים עין: האם טראורה ובראון חוזרים, האם וולף נשאר בהרכב, והאם ברוקלין משחזרת את החדות מול יריבה רצינית יותר. אני מצפה לראות חמישייה של - טראורה כמוביל כדור, דמין גארד פאסיבי, פורטר סקורר ראשי עם הגנה חלשה, רנדל סקורר אגרסיבי משני צדי המגרש ושארפ שנהדר בשקט בשקט בכל אספקט. מהספסל ימשיכו בדרכם המצוינת בראון וואגנר!</p>
+  </section>
+
+  <section class="card" id="sources">
+    <h2>מקורות</h2>
+    <ol class="sources">
+      <li><span class="n"><bdi dir="ltr">1.</bdi></span><div class="src-body"><a class="src-title" href="https://www.nba.com/game/bkn-vs-nop-0022600223/box-score">בוקס סקור רשמי, נטס–פליקנס</a><div class="src-meta"><bdi dir="ltr">NBA.com</bdi>, <span class="date">11 בנובמבר 2026</span></div></div></li><li><span class="n"><bdi dir="ltr">2.</bdi></span><div class="src-body"><a class="src-title" href="https://statsdmz.nba.com/pdfs/20261111/20261111_BKNNOP.pdf">דוח הסופר הרשמי, PDF</a><div class="src-meta"><bdi dir="ltr">NBA Stats</bdi>, <span class="date">11 בנובמבר 2026</span></div></div></li><li><span class="n"><bdi dir="ltr">3.</bdi></span><div class="src-body"><a class="src-title en" href="https://nypost.com/2026/11/11/sports/nets-pound-pelicans-for-much-needed-bounceback-win/"><bdi dir="ltr" class="wrap">Nets pound Pelicans for much-needed bounceback win</bdi></a><div class="src-meta"><bdi dir="ltr">New York Post</bdi>, <span class="date">11 בנובמבר 2026</span></div></div></li><li><span class="n"><bdi dir="ltr">4.</bdi></span><div class="src-body"><a class="src-title en" href="https://www.si.com/nba/nets/onsi/three-takeaways-from-brooklyn-nets-blowout-win-over-pelicans"><bdi dir="ltr" class="wrap">Three Takeaways From Brooklyn Nets&#x27; Blowout Win Over Pelicans</bdi></a><div class="src-meta"><bdi dir="ltr">Sports Illustrated</bdi>, <span class="date">11 בנובמבר 2026</span></div></div></li><li><span class="n"><bdi dir="ltr">5.</bdi></span><div class="src-body"><a class="src-title en" href="https://netswire.usatoday.com/story/sports/nba/nets/2026/11/11/nets-mikel-brown-jr-nolan-traore-out-wednesday-vs-pelicans/92734047007/"><bdi dir="ltr" class="wrap">Nets&#x27; Mikel Brown Jr., Nolan Traore out Wednesday vs. Pelicans</bdi></a><div class="src-meta"><bdi dir="ltr">Nets Wire</bdi>, <span class="date">11 בנובמבר 2026</span></div></div></li><li><span class="n"><bdi dir="ltr">6.</bdi></span><div class="src-body"><a class="src-title en" href="https://netswire.usatoday.com/story/sports/nba/nets/2026/11/10/espn-projects-nets-to-trade-michael-porter-jr-before-trade-deadline/92715769007/"><bdi dir="ltr" class="wrap">ESPN projects Nets to trade Michael Porter Jr. before trade deadline</bdi></a><div class="src-meta"><bdi dir="ltr">Nets Wire, citing Bobby Marks</bdi>, <span class="date">10 בנובמבר 2026</span></div></div></li><li><span class="n"><bdi dir="ltr">7.</bdi></span><div class="src-body"><a class="src-title" href="https://www.nba.com/game/bkn-vs-nop-0022600223/blueprint">מעקב <bdi dir="ltr">NBA Blueprint</bdi> (המגן הקרוב בזריקה) ופליי־ביי־פליי, נטס–פליקנס</a><div class="src-meta"><bdi dir="ltr">NBA.com</bdi>, <span class="date">11 בנובמבר 2026</span></div></div></li>
+    </ol>
+  </section>
+
+  <p class="foot">גיליון 1 · ניוזלטר נטס · 12 בנובמבר 2026<br>
+<span style="display:block;margin-top:6px;font-size:11px;">הסמל והאווטארים הם עיצוב מקורי של הניוזלטר, לא סימנים או תמונות רשמיים של ה־NBA. הנתונים מהבוקס סקור הרשמי, עם קישור למקורות.</span></p>
+</div>
+</body>
+</html>
